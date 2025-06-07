@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Emoji Game</title>
+  <style>
+    body { text-align: center; padding: 2rem; background: #e6f7ff; font-family: 'Segoe UI', sans-serif; }
+    h1 { color: #0099cc; }
+    button { padding: 10px 20px; font-size: 1rem; margin-top: 20px; border: none; background: #00bfff; color: white; border-radius: 10px; }
+    nav a { margin: 0 10px; text-decoration: none; color: #006699; }
+    #emoji { font-size: 3rem; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <h1>Click for a Cute Emoji! 😊</h1>
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="emoji.html">Emoji Game</a> |
+    <a href="feelings.html">My Feelings</a>
+  </nav>
+  <div id="emoji">❤️</div>
+  <button onclick="changeEmoji()">Tap Me</button>
+  <script>
+    const emojis = ['🥺', '❤️', '😢', '🌸', '💗', '😊', '😔', '💖'];
+    function changeEmoji() {
+      const emoji = emojis[Math.floor(Math.random() * emojis.length)];
+      document.getElementById('emoji').textContent = emoji;
+    }
+  </script>
+</body>
+</html>
